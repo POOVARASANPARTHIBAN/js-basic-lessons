@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable semi */
 console.log('Hi Node!!!');
 function callme () {

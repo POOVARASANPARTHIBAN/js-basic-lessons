@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  align-items: center;
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  font-family: "Space Mono", monospace;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  width: 4rem;
+}
+.logo img {
+  width: 100%;
+}
+.calculator-container {
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 1rem;
+  display: flex;
+  height: 24rem;
+  justify-content: center;
+  width: 40rem;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  padding-right: 2rem;
+  width: 45%;
+}
+.left-container label {
+  color: var(--Dark-grayish-cyan2);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+}
+#bill,
+.people-count input {
+  background: url(/tip-calculator-app-main/images/icon-dollar.svg);
+  background-color: var(--Light-grayish-cyan2);
+  background-repeat: no-repeat;
+  background-position: left 18px top 8px;
+  border-radius: 0.3rem;
+  border: none;
+  color: var(--Dark-grayish-cyan);
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2rem;
+  outline-color: var(--Strong-cyan);
+  text-align: right;
+  width: 100%;
+}
+.buttons h4 {
+  color: var(--Dark-grayish-cyan2);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  margin-top: 3rem;
+}
+.buttons button,
+.buttons input {
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  display: inline;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2rem;
+  margin: 0.4rem 0;
+  width: 30%;
+}
+.buttons button {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Light-grayish-cyan2);
+}
+.buttons button:focus {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+.buttons input {
+  background-color: var(--Light-grayish-cyan2);
+  color: var(--Very-dark-cyan);
+  outline-color: var(--Strong-cyan);
+  text-align: right;
+}
+.people-count {
+  color: var(--Dark-grayish-cyan2);
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+  margin-top: 3.1rem;
+}
+.people-count h4 {
+  display: flex;
+  justify-content: space-between;
+}
+.people-count h4 .error-msg {
+  color: red;
+  font-size: 12px;
+  opacity: 0;
+}
+.people-count input {
+  background: url(/tip-calculator-app-main/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left 18px top 8px;
+}
+.right-container {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+  padding: 2rem;
+  width: 45%;
+}
+.tip,
+.total {
+  color: var(--White);
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+.tip p,
+.total p {
+  color: var(--Dark-grayish-cyan2);
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.tip h2,
+.total h2 {
+  color: var(--Strong-cyan);
+}
+
+#reset {
+  background-color: var(--Strong-cyan);
+  border: none;
+  border-radius: 0.3rem;
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+  font-weight: 700;
+  height: 5rem;
+}
+#reset:hover {
+  background-color: var(--Light-grayish-cyan);
+}
+@media (max-width: 650px) {
+  body {
+    overflow: scroll;
+  }
+  .logo {
+    margin-top: 2rem;
+  }
+  .calculator-container {
+    flex-direction: column;
+    height: 100%;
+    margin-top: -2rem;
+    width: 100%;
+  }
+  .left-container {
+    height: 45%;
+    margin-top: 2rem;
+    width: 80%;
+  }
+  .buttons {
+    margin-top: 1rem;
+    width: 110%;
+  }
+  .buttons h4 {
+    margin: 0;
+  }
+  .buttons button,
+  .buttons input {
+    font-size: 1.5rem;
+    height: 3.5rem;
+    padding: 0;
+    width: 48%;
+  }
+  .people-count {
+    margin-top: 2rem;
+    width: 110%;
+  }
+  .people-count input,
+  #bill {
+    background-position: left 18px top 20px;
+    font-size: 1.5rem;
+    height: 3.5rem;
+    width: 100%;
+  }
+  #bill {
+    width: 110%;
+  }
+  .right-container {
+    width: 80%;
+    height: 40%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .right-container #reset {
+    height: 3.5rem;
+    margin-top: 1rem;
+  }
+}
