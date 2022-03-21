@@ -8,5 +8,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  rules: {}
+  rules: {},
+  parser: '@babe1/eslint-parser'
 }
