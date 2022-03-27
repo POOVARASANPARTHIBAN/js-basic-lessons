@@ -1,139 +1,120 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
   --Blue: hsl(248, 32%, 49%);
   --Dark-Blue: hsl(249, 10%, 26%);
-  --Green: hsl(154, 59%, 51%);
   --Grayish-Blue: hsl(246, 25%, 77%);
-  --Red: hsl(0, 100%, 74%);
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-}
-.container {
-  align-items: center;
-  background-color: var(--Red);
-  background-image: url("images/bg-intro-desktop.png");
+main {
   display: flex;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 500px;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--Red);
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 400px;
+  margin-left: 60px;
+  margin-top: 40px;
+  justify-content: center;
+}
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-size: x-large;
+  width: 400px;
+  height: 100px;
+  color: white;
+}
+.para {
+  font-family: "Bai Jamjuree", sans-serif;
+  width: 400px;
+  margin-top: 20px;
+  color: white;
+}
+.right {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  max-width: 100%;
-  padding-left: 120px;
-  padding-right: 120px;
+  justify-content: center;
 }
-.text {
-  flex-basis: 45%;
-}
-.text h2 {
-  color: white;
-  font-size: 35px;
-}
-.text p {
-  color: white;
-  font-size: 12px;
-}
-.formarea {
-  flex-basis: 45%;
-  height: 70%;
-}
-.formarea .btn {
+.right-top {
   background-color: var(--Blue);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 400;
-  margin-bottom: 25px;
-  padding: 15px 10px;
-  width: 100%;
-}
-.formarea .btn span {
-  font-weight: 600;
-}
-.formarea form {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0px 8px 0px 0px #0000001f;
-  padding: 30px;
-  width: 100%;
-}
-.formarea form input {
-  border: 1px solid var(--Grayish-Blue);
-  border-radius: 8px;
-  outline: none;
-  padding: 15px 25px;
-  width: 100%;
-}
-.formarea form input.wrong {
-  border: 2px solid var(--Red);
-  margin-bottom: 6px;
-  position: relative;
-}
-.formarea form .inpt {
-  height: fit-content;
-  height: 55px;
-  margin-bottom: 20px;
-  position: relative;
-}
-.formarea form .inpt img {
-  height: 20px;
-  opacity: 0;
-  position: absolute;
-  right: 17px;
-  top: 44%;
-  transform: translateY(-50%);
-}
-.formarea form .inpt > span {
-  color: var(--Red);
-  font-size: 11px;
-  float: right;
-  font-weight: 600;
-  margin-bottom: 4px;
-  margin-top: 1px;
-}
-.formarea form input::placeholder {
-  color: var(--Dark-Blue);
-  font-family: inherit;
-  font-weight: 700;
-}
-.formarea form input:focus::placeholder {
-  color: transparent;
-}
-.formarea form input[type="submit"] {
-  background-color: var(--Green);
-  border: none;
-  box-shadow: 0px 5px 0px 0px hsl(154deg 91% 36%);
-  color: white;
-  font-family: inherit;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.formarea form p {
   color: var(--Grayish-Blue);
-  font-size: 11px;
-  margin-bottom: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
 }
-.formarea form p span {
+.right-top span {
+  color: white;
+}
+.right-bottom {
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.from1 {
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin-left: 40px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form2 {
+  margin-bottom: 30px;
+}
+.content {
+  margin-left: 50px;
+  font-size: x-small;
+  color: var(--Grayish-Blue);
+}
+input {
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+  border: 0.5px var(--Grayish-Blue) solid;
+}
+.claim {
+  padding: 10px;
+  font-size: 15px;
+  background-color: var(--Green);
+  border-style: none;
+}
+#term {
   color: var(--Red);
-  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
 }
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-    height: 100%;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-  }
-  .text h2 {
-    font-size: 30px;
-  }
-  .text p {
-    margin-bottom: 55px;
-  }
+.right-top:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 30px var(--Blue);
+}
+input:hover {
+  box-shadow: 5px 5px 30px var(--Grayish-Blue);
 }

@@ -1,0 +1,48 @@
+body {
+  background-color: gray;
+}
+h1 {
+  margin: auto;
+  text-align: center;
+  margin-top: auto;
+  margin-top: 10%;
+}
+input {
+  appearance: none;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+}
+select {
+  appearance: none;
+  background-color: yellow;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+th,
+td {
+  appearance: none;
+  /* background: yellow; */
+  background-color: yellow;
+  font-weight: 1000;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+table {
+  background-color: white;
+  box-shadow: 5px 5px 8px rgb(179, 179, 39);
+  border-radius: 5px;
+  height: 100px;
+  margin: auto;
+  padding: 15px;
+  table-layout: fixed;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  margin-top: 3%;
+}

@@ -39,6 +39,7 @@ main {
 .sub {
   color: var(--veryDarkBlue);
   font-size: max(0.8rem, 1vw);
+  text-align: center;
 }
 .form {
   column-gap: 2%;
@@ -108,33 +109,4 @@ main {
   color: var(--gray);
   font-size: max(0.6rem, 0.6vw);
   margin-top: -2%;
-}
-@media screen and (max-width: 730px) {
-  main {
-    min-width: 0;
-    width: 80%;
-  }
-  .form {
-    align-items: center;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  .form input {
-    width: 100%;
-  }
-  .error-text-mobile {
-    color: var(--lightRed);
-    font-size: max(0.6rem, 0.6vw);
-    font-style: italic;
-    margin-top: -1%;
-    margin-bottom: 2%;
-    text-align: center;
-    width: 100%;
-  }
-  .form button {
-    width: 100%;
-  }
-  .illustration {
-    width: 100%;
-  }
 }

@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="./themes/style.css" />
-        <title>Launch countdown timer</title>
-    </head>
-    <body>
-        <div class="app">
-            <h3>We're launching soon</h3>
-            <div class="countdown-container">
-                <div class="countdown-item">
-                    <div class="upper-box"></div>
-                    <span id="days">08</span>
-                    <div class="lower-box"></div>
-                    <span>days</span>
-                </div>
-                <div class="countdown-item">
-                    <div class="upper-box"></div>
-                    <span id="hours">23</span>
-                    <div class="lower-box"></div>
-                    <span>hours</span>
-                </div>
-                <div class="countdown-item">
-                    <div class="upper-box"></div>
-                    <span id="minutes">55</span>
-                    <div class="lower-box"></div>
-                    <span>minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <div class="upper-box"></div>
-                    <span id="seconds">41</span>
-                    <div class="lower-box"></div>
-                    <span>seconds</span>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./themes/style.css" />
+    <title>Countdown</title>
+  </head>
+  <body>
+    <main>
+      
+        <h1>WE'RE LAUNCHING SOON</h1>
+      <div class="container">
+        <div class="card">
+          <div class="top clock_card"></div>
+          <span class="number" id="days"></span>
+          <div class="bottom clock_card"></div>
+          <span>DAYS</span>
         </div>
-        <div class="background-hills"></div>
-        <div class="background-stars"></div>
-        <footer>
-            <ul>
-                <li>
-                    <a href="facebook.com"
-                        ><i class="fab fa-facebook-square"></i
-                    ></a>
-                </li>
-                <li>
-                    <a href="pinterest.com"><i class="fab fa-pinterest"></i></a>
-                </li>
-                <li>
-                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </footer>
-        <script src="./script/script.js" type="module"></script>
-    </body>
+
+        <div class="card">
+          <div class="top clock_card"></div>
+          <span class="number" id="hours"></span>
+          <div class="bottom clock_card"></div>
+          <span>HOURS</span>
+        </div>
+
+        <div class="card">
+          <div class="top clock_card"></div>
+          <span class="number" id="minutes"></span>
+          <div class="bottom clock_card"></div>
+          <span>MINUTES</span>
+        </div>
+
+        <div class="card">
+          <div class="top clock_card"></div>
+          <span class="number" id="seconds"></span>
+          <div class="bottom clock_card"></div>
+          <span>SECONDS</span>
+        </div>
+      
+      
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="./images/icon-facebook.svg" alt="icon" />
+        <img src="./images/icon-instagram.svg" alt="icon" />
+        <img src="./images/icon-pinterest.svg" alt="icon" />
+      </div>
+    </footer>
+  </body>
+  <script src="./script/script.js"></script>
 </html>

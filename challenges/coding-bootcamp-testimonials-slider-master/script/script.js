@@ -1,54 +1,31 @@
-/* eslint-disable semi */
-const slides = document.querySelectorAll('.l-container__item1');
-const buttonLeft = document.querySelectorAll('.btn--left');
-const buttonRight = document.querySelectorAll('.btn--right');
+/eslint-disable/
+const next=document.querySelector('.next');
+const previous=document.querySelector('.previous');
+const slides=document.querySelectorAll('.slide');
 
-buttonRight.forEach(function (btnright) {
-  btnright.addEventListener('click', rightSlider);
-})
+let index=0;
 
-buttonLeft.forEach(function (btnleft) {
-  btnleft.addEventListener('click', leftSlider);
-})
-
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'ArrowRight') {
-    rightSlider();
-  } else if (e.key === 'ArrowLeft') {
-    leftSlider();
-  }
-})
-
-function leftSlider () {
-  slides.forEach(function (slide) {
-    if (slide.classList.contains('item1--active')) {
-      slide.classList.toggle('item1--active');
-      slide.classList.toggle('item1--slideleft');
-    } else if (slide.classList.contains('item1--slideleft')) {
-      slide.classList.toggle('item1--slideleft');
-      slide.classList.toggle('item1--active');
-    } else if (slide.classList.contains('item1--slideright')) {
-      slide.classList.toggle('item1--slideright');
-      slide.classList.toggle('item1--active');
-    } else {
-      slide.classList.toggle('item1--active');
+function nextSlide(){
+    index++;
+    if(index>slides.length-1){
+        index=0;
     }
-  })
+    slides.forEach((slide) => {
+        slide.style.display = 'none';
+    });
+    slides[index].style.display='flex';
 }
 
-function rightSlider () {
-  slides.forEach(function (slide) {
-    if (slide.classList.contains('item1--active')) {
-      slide.classList.toggle('item1--active');
-      slide.classList.toggle('item1--slideright');
-    } else if (slide.classList.contains('item1--slideleft')) {
-      slide.classList.toggle('item1--slideleft');
-      slide.classList.toggle('item1--active');
-    } else if (slide.classList.contains('item1--slideright')) {
-      slide.classList.toggle('item1--slideright');
-      slide.classList.toggle('item1--active');
-    } else {
-      slide.classList.toggle('item1--active');
+function previousSlide(){
+    index--;
+    if(index<0){
+        index=slides.length-1;
     }
-  })
+    slides.forEach((slide) => {
+        slide.style.display = 'none';
+    });
+    slides[index].style.display='flex';
 }
+
+next.addEventListener('click',nextSlide);
+previous.addEventListener('click',previousSlide);
