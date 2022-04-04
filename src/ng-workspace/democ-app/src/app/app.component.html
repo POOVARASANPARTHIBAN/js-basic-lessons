@@ -1,5 +1,6 @@
-<div class="container">
-  <h1>RT-PCR REGISTRATION FORM</h1>
+<div class="body">
+  <div class="container">
+  <h1>RT-PCR<br>REGISTRATION FORM</h1>
   <hr>
   <form class="myform" [formGroup]="fg" (ngSubmit)="onSubmit()">
           <div class="field">
@@ -71,11 +72,7 @@
           </div>
   </form>
 </div>
-<div class="search">
-  <input type="text" id="find" (keyup)="removefield()" placeholder="Enter name to search">
-  <input type="submit" (click)="search()" id="submit">
-  <div id="msg"></div>
-</div>
+
 <div>
   <h2>REGISTRATION DATABASE</h2>
 </div>
@@ -117,12 +114,16 @@
       <td>
         {{ value.result }}
       </td>
-      <td>
-        {{ value.aadhar }}
-      </td>
     </tr>
   </table>
 </div>
+
+<div class="search">
+  <input type="text" id="find" (keyup)="removefield()" placeholder="Enter name to search">
+  <input type="submit" (click)="search()" id="submit">
+  <div id="msg"></div>
+</div>
+
 <div class="tab">
   <table id="table1">
     <tr>
@@ -135,7 +136,7 @@
         {{ value.fname }}
       </td>
       <td>
-        {{ value.lname }}
+        {{ value.aadhar }}
       </td>
       <td>
         {{ value.dob }}
@@ -161,9 +162,7 @@
       <td>
         {{ value.result }}
       </td>
-      <td>
-        {{ value.aadhar }}
-      </td>
     </tr>
   </table>
+</div>
 </div>

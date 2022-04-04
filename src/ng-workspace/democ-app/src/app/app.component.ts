@@ -11,8 +11,15 @@ export class AppComponent {
   store:any=[];
   title='hello';
   input: any;
-  headers=["First Name","Aadhar Number","Date of Birth","Gender","City","Date Of Test","Time Of Test","Lab Name",
-  "Report Number","Result"];
+  headers=["First Name",
+          "Aadhar Number", 
+          "Date of Birth",
+          "Gender","City",
+          "Date Of Test",
+          "Time Of Test",
+          "Lab Name",
+          "Report Number",
+          "Result"];
   searchvalue:any=[];
  ngOnInit(): void {}
   fg = new FormGroup({
@@ -40,7 +47,7 @@ export class AppComponent {
   search(){
     console.log((<HTMLDivElement>document.getElementById("find")).innerHTML);
     if((<HTMLDivElement>document.getElementById("find")).innerText==""){
-      (<HTMLDivElement>document.getElementById("msg")).innerText="Sorry!! No records found in our database☹";
+      (<HTMLDivElement>document.getElementById("msg")).innerText="Oops!! No records found☹";
     }
     this.input=(<HTMLInputElement>document.getElementById("find")).value;
     this.store.forEach((element:any) => {
@@ -50,8 +57,8 @@ export class AppComponent {
     });
     (<HTMLInputElement>document.getElementById("find")).value="";
   }  
-  removefield(){
-    (<HTMLTableRowElement>document.getElementById('tr')).style.display="none";
+  removefield(){  
+      this.searchvalue = [];
   }
 }
 

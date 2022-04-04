@@ -1,13 +1,18 @@
-body {
+.body {
+    background-image: url('../assets/images/architecture-panels.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
   }
   .container {
-    background-color: gray;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 25px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
   }
   .field {
@@ -20,15 +25,22 @@ body {
     padding: 3px;
     width: 500px;
   }
-  
+  h1{
+    color: black;
+  }
+  h2{
+    text-align: center;
+    margin: 5%;
+    color: black;
+  }
   
   label {
     font-weight: 450;
   }
   input {
     border-radius: 5px;
-    border: 1px solid gray;
-    height: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 30px;
     width: 250px;
   }
   
@@ -46,17 +58,17 @@ body {
   }
   #table,
   #table1 {
-    background-color: transparent;
     border: 1px solid black;
     text-align: center;
     width: 1350px;
   }
   #table tr th,
-  #table1 tr th {
+  #table1 tr th 
+  {
     background-color: gray;
     border: 1px solid black;
     color: black;
-    margin: 30px;
+    margin: 20px;
   }
   #table td,
   #table1 td {
@@ -70,9 +82,11 @@ body {
   }
   .search input {
     border: 1px solid black;
+    height: 30px;
   }
   .buttons {
     margin: 10px;
+    color: black;
   }
   .buttons button {
     background-color: gray;
@@ -86,6 +100,7 @@ body {
   }
   
   #submit {
+    background-color: gray;
     height: 25px;
     margin-left: 20px;
     width: 100px;
